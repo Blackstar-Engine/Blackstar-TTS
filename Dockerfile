@@ -22,9 +22,9 @@ RUN --mount=type=cache,target=/var/cache/apt,sharing=locked \
     rm -rf /var/lib/apt/lists/*
 
 # ---------- Non-root runtime ----------
-RUN useradd -m -u 1000 tts1tts1botuser
+RUN useradd -m -u 1000 tts1botuser
 WORKDIR /app
-RUN chown tts1tts1botuser:tts1tts1botuser /app
+RUN chown tts1botuser:tts1botuser /app
 USER tts1botuser
 
 # ---------- Dependency layer (for fast rebuilds) ----------
